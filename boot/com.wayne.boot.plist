@@ -7,10 +7,46 @@
     <key>Label</key>
     <string>com.wayne.boot</string>
     <key>ProgramArguments</key>
+    <!-- 交换 CapsLock 按键和 Control 按键的位置-->
     <array>
         <string>zsh</string>
         <string>-c</string>
         <string>"$HOME/Documents/shells/boot/exchangeCapsLockAndControlKey.sh"</string>
+    </array>
+
+    <!-- 设置触摸板轻触点击和三指拖移 -->
+    <array>
+        <string>zsh</string>
+        <string>-c</string>
+        <string>"$HOME/Documents/shells/boot/touchPadOpt.sh"</string>
+    </array>
+
+    <!-- 开启 F1～F12 标准功能按键 -->
+    <array>
+        <string>zsh</string>
+        <string>-c</string>
+        <string>"$HOME/Documents/shells/boot/turnOnFxKey.sh"</string>
+    </array>
+
+    <!-- 开启全键盘控制 -->
+    <array>
+        <string>zsh</string>
+        <string>-c</string>
+        <string>"$HOME/Documents/shells/boot/turnOnCompleteKeyControl.sh"</string>
+    </array>
+
+    <!-- 关闭第三方软件验证 -->
+    <array>
+        <string>zsh</string>
+        <string>-c</string>
+        <string>"$HOME/Documents/shells/boot/turnOffThirdPartyVerify.sh"</string>
+    </array>
+
+    <!-- 关闭镜像文件验证 -->
+    <array>
+        <string>zsh</string>
+        <string>-c</string>
+        <string>"$HOME/Documents/shells/boot/turnOffDMGVerify.sh"</string>
     </array>
     <key>KeepAlive</key>
     <true/>
