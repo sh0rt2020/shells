@@ -134,7 +134,7 @@ if [[ ! -e /Applications/iTerm.app ]] ; then
     echo 'iTerm2 is been installing...'
     brew cask install iterm2
     defaults delete com.googlecode.iterm2
-    ln -s ./iTerm2/com.googlecode.iterm2.plist $HOME/Library/Preferences
+    ln -s ../iTerm2/com.googlecode.iterm2.plist $HOME/Library/Preferences
     defaults read -app iTerm >/dev/null
 else
     echo 'iTerm2 has been installed.'
