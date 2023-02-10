@@ -15,7 +15,7 @@ fi
 which -s brew
 if [[ $? != 0 ]] ; then
     echo 'Homebrew is been installing...'
-    # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
     echo 'Homebrew has been installed.'
     echo 'Will execute brew update...'

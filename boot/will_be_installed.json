@@ -1,0 +1,50 @@
+
+[
+    {
+        "name": "HomeBrew",
+        "precheck": "which brew",
+        "action": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
+    },
+
+    {
+        "name": "pyenv",
+        "precheck": "which pyenv",
+        "action": "brew install pyenv"
+    },
+
+    {
+        "name": "rbenv",
+        "precheck": "which rbenv",
+        "action": "brew install rbenv"
+    },
+
+    {
+        "name": "CocoaPods",
+        "precheck": "which cocoapods",
+        "action": "brew install cocoapods"
+    },
+
+    {
+        "name": "fastlane",
+        "precheck": "which fastlane",
+        "action": "brew install fastlane"
+    },
+
+    {
+        "name": "iTerm2",
+        "precheck": "",
+        "action": "brew install --cask iterm2"
+    },
+
+    {
+        "name": "Visual Studio Code",
+        "precheck": "",
+        "action": "brew install --cask visual-studio-code"
+    },
+
+    {
+        "name": "Google Chrome",
+        "precheck": "",
+        "action": "brew install --cask google-chrome"
+    }
+]

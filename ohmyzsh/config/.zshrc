@@ -1,11 +1,18 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 export PATH="$PATH:/usr/local/sbin"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/***/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # theme
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 #plugins
 plugins=(
@@ -13,12 +20,13 @@ plugins=(
     zsh-completions
     zsh-autosuggestions
     zsh-syntax-highlighting
+    zsh-history-substring-search
 )
 source $ZSH/oh-my-zsh.sh
 
 # aliases
- alias zshconfig="mate ~/.zshrc"
- alias ohmyzsh="mate ~/.oh-my-zsh"
+#  alias zshconfig="mate ~/.zshrc"
+#  alias ohmyzsh="mate ~/.oh-my-zsh"
  alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
  alias xcode="/Applications/Xcode.app/Contents/MacOS/Xcode"
 
@@ -64,5 +72,5 @@ eval "$(pyenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-#plugins
-source /Users/***/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
