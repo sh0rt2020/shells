@@ -2,49 +2,146 @@
 [
     {
         "name": "HomeBrew",
-        "precheck": "which brew",
+        "required": true,
+        "description_command": false,
+        "description": "The Missing Package Manager for macOS (or Linux).",
+        "prefix_check": false,
+        "path": "/opt/homebrew/bin/brew",
         "action": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""
     },
-
-    {
-        "name": "pyenv",
-        "precheck": "which pyenv",
-        "action": "brew install pyenv"
-    },
-
-    {
-        "name": "rbenv",
-        "precheck": "which rbenv",
-        "action": "brew install rbenv"
-    },
-
-    {
-        "name": "CocoaPods",
-        "precheck": "which cocoapods",
-        "action": "brew install cocoapods"
-    },
-
-    {
-        "name": "fastlane",
-        "precheck": "which fastlane",
-        "action": "brew install fastlane"
-    },
-
     {
         "name": "iTerm2",
-        "precheck": "",
+        "required": true,
+        "description_command": true,
+        "description": "brew info iterm2",
+        "prefix_check": false,
+        "path": "/Applications/iTerm.app",
         "action": "brew install --cask iterm2"
     },
-
+    {
+        "name": "Oh My Zsh",
+        "required": true,
+        "description_command": false,
+        "description": "A delightful, open source, community-driven framework for managing your Zsh configuration.",
+        "prefix_check": false,
+        "path": "~/.oh-my-zsh",
+        "action": "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
+    },
+    {
+        "name": "pyenv",
+        "required": true,
+        "description_command": true,
+        "description": "brew info pyenv",
+        "prefix_check": false,
+        "path": "",
+        "action": "brew install pyenv"
+    },
+    {
+        "name": "rbenv",
+        "required": true,
+        "description_command": true,
+        "description": "brew info rbenv",
+        "prefix_check": false,
+        "path": "/opt/homebrew/bin/rbenv",
+        "action": "brew install rbenv"
+    },
+    {
+        "name": "CocoaPods",
+        "required": true,
+        "description_command": true,
+        "description": "brew info cocoapods",
+        "prefix_check": false,
+        "path": "/opt/homebrew/bin/pod",
+        "action": "brew install cocoapods"
+    },
+    {
+        "name": "fastlane",
+        "required": true,
+        "description_command": true,
+        "description": "brew info fastlane",
+        "prefix_check": false,
+        "path": "/opt/homebrew/bin/fastlane",
+        "action": "brew install fastlane"
+    },
     {
         "name": "Visual Studio Code",
-        "precheck": "",
+        "required": true,
+        "description_command": true,
+        "description": "brew info visual-studio-code",
+        "prefix_check": false,
+        "path": "/Applications/Visual Studio Code.app",
         "action": "brew install --cask visual-studio-code"
     },
-
     {
         "name": "Google Chrome",
-        "precheck": "",
+        "required": true,
+        "description_command": true,
+        "description": "brew info google-chrome",
+        "prefix_check": false,
+        "path": "/Applications/Google Chrome.app",
         "action": "brew install --cask google-chrome"
+    },
+    {
+        "name": "Lookin",
+        "required": true,
+        "description_command": true,
+        "description": "brew info lookin",
+        "prefix_check": false,
+        "path": "/Applications/Lookin.app",
+        "action": "brew install --cask lookin"
+    },
+    {
+        "name": "Alfred",
+        "required": true,
+        "description_command": true,
+        "description": "brew info alfred",
+        "prefix_check": true,
+        "path": "/Applications/Alfred",
+        "action": "brew install --cask alfred"
+    },
+    {
+        "name": "Fork",
+        "required": true,
+        "description_command": true,
+        "description": "brew info fork",
+        "prefix_check": false,
+        "path": "/Applications/Fork.app",
+        "action": "brew install --cask fork"
+    },
+    {
+        "name": "ClashX",
+        "required": true,
+        "description_command": true,
+        "description": "brew info clashx",
+        "prefix_check": false,
+        "path": "/Applications/ClashX.app",
+        "action": "brew install --cask clashx"
+    },
+    {
+        "name": "TunnelBlick",
+        "required": true,
+        "description_command": true,
+        "description": "brew info tunnelblick",
+        "prefix_check": false,
+        "path": "/Applications/Tunnelblick.app",
+        "action": "brew install --cask tunnelblick"
+    },
+    {
+        "name": "LFS",
+        "required": false,
+        "description_command": true,
+        "description": "brew info git-lfs",
+        "prefix_check": false,
+        "path": "/opt/homebrew/bin/git-lfs",
+        "action": "brew install --cask git-lfs"
+    },
+    {
+        "name": "Jenkins",
+        "required": false,
+        "description_command": true,
+        "description": "brew info jenkins",
+        "prefix_check": false,
+        "path": "",
+        "action": "brew install jenkins"
     }
 ]
