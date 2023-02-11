@@ -38,9 +38,11 @@ alias fivn="fastlane run increment_version_number version_number:"
 alias fibn="fastlane run increment_build_number build_number:"
 
 # git
+alias gaa="git add --all"
+alias gcmsg="git commit -m"
 alias gp="git push"
 alias gpl="git pull"
-alias gre="git pull --rebase"
+alias gpre="git pull --rebase"
 alias gs="git status"
 alias gdi="git diff"
 alias gl="git log --oneline --graph"
@@ -56,7 +58,7 @@ alias gpo="git push origin :"
 alias gpso="git push --set-upstream origin"
 
 # pod
-alias pru="pod repo update iTutorSpecs"
+alias pru="pod repo update"
 alias pin="pod install --clean-install"
 alias pinn="pod install --clean-install --no-repo-update"
 alias pup="pod update"
