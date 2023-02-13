@@ -143,5 +143,14 @@
         "prefix_check": false,
         "path": "",
         "action": "brew install jenkins"
+    },
+    {
+        "name": "git-flow",
+        "required": false,
+        "description_command": true,
+        "description": "brew info git-flow",
+        "prefix_check": false,
+        "path": "/opt/homebrew/bin/git-flow",
+        "action": "brew install git-flow"
     }
 ]
