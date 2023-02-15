@@ -28,20 +28,53 @@ class ConfigParser
 
       json = File.read(path)
       obj = JSON.parse(json)
+      items = Array.new
+      obj.each do |hash|
+        items.push(ConfigItem.new(hash))
+      end
 
-      puts obj.length
-      puts obj.class
-      puts obj[2].class
-      puts obj[2]['required']
-
-      item = ConfigItem.new(obj[2])
-      puts item.class
-      puts item.required
+      return items
     else
       puts "❌未找到配置文件，解析失败！"
+      return Array.new
     end
   end
 end
 
 
-ConfigParser.new.parseConfig($configPath)
+items = ConfigParser.new.parseConfig($configPath)
+items.each do |item|
+  if item.required == true
+    # 打印指令名称
+    puts "********** 准备安装 #{item.name} ************"
+
+    # 打印指令描述信息
+    if item.descriptionCommand == true
+      exec "sh #{item.description}"
+    else
+      puts item.description
+    end
+
+    # 检查指令是否已安装
+    if item.prefixCheck == true
+      Dir::foreach('/Applications/') { |appname|
+        if appname.include?(item.path)
+          puts "*********** #{item.name} 已安装 *************"
+        else
+          puts "*********** 正在安装 #{item.name} ************"
+          exec item.action
+        end
+      }
+    else
+      if File.directory?(item.path) || File.symlink?(item.path) || File.exist?(item.path)
+        puts "*********** #{item.name} 已安装 *************"
+      else
+        puts "*********** 正在安装 #{item.name} ************"
+        exec item.action
+      end
+    end
+
+    puts
+    puts
+  end
+end

@@ -24,7 +24,7 @@
         "description_command": false,
         "description": "A delightful, open source, community-driven framework for managing your Zsh configuration.",
         "prefix_check": false,
-        "path": "~/.oh-my-zsh",
+        "path": "./.oh-my-zsh",
         "action": "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
     },
     {
@@ -96,7 +96,7 @@
         "description_command": true,
         "description": "brew info alfred",
         "prefix_check": true,
-        "path": "/Applications/Alfred",
+        "path": "Alfred",
         "action": "brew install --cask alfred"
     },
     {
