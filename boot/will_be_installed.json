@@ -24,7 +24,7 @@
         "description_command": false,
         "description": "A delightful, open source, community-driven framework for managing your Zsh configuration.",
         "prefix_check": false,
-        "path": "./.oh-my-zsh",
+        "path": "~/.oh-my-zsh/",
         "action": "sh -c \"$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\""
     },
     {
@@ -33,7 +33,7 @@
         "description_command": true,
         "description": "brew info pyenv",
         "prefix_check": false,
-        "path": "",
+        "path": "/opt/homebrew/bin/pyenv",
         "action": "brew install pyenv"
     },
     {

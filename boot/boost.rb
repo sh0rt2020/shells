@@ -50,15 +50,16 @@ items.each do |item|
 
     # 打印指令描述信息
     if item.descriptionCommand == true
-      exec "sh #{item.description}"
+      exec item.description
     else
       puts item.description
     end
 
     # 检查指令是否已安装
+    checkPath = item.path
     if item.prefixCheck == true
       Dir::foreach('/Applications/') { |appname|
-        if appname.include?(item.path)
+        if appname.include?(checkPath)
           puts "*********** #{item.name} 已安装 *************"
         else
           puts "*********** 正在安装 #{item.name} ************"
@@ -66,7 +67,11 @@ items.each do |item|
         end
       }
     else
-      if File.directory?(item.path) || File.symlink?(item.path) || File.exist?(item.path)
+      if File.absolute_path?(checkPath) == false
+        checkPath = File.expand_path(checkPath, "~")
+      end
+
+      if File.directory?(checkPath) || File.symlink?(checkPath) || File.exist?(checkPath)
         puts "*********** #{item.name} 已安装 *************"
       else
         puts "*********** 正在安装 #{item.name} ************"
