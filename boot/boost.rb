@@ -12,10 +12,11 @@ class ConfigItem
   def initialize(hash)
     @name               = hash['name']
     @required           = hash['required']
-    @descriptionCommand = hash['descriptionCommand']
+    @descriptionCommand = hash['description_command']
     @description        = hash['description']
-    @prefixCheck        = hash['prefixCheck']
+    @prefixCheck        = hash['prefix_check']
     @path               = hash['path']
+    @checkAction        = hash['check_action']
     @action             = hash['action']
   end
 end
